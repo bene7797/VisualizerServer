@@ -1,6 +1,8 @@
 const express = require("express");
 const ytdl = require("ytdl-core");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 
 app.get("/audio", async (req, res) => {
   const url = req.query.url;
